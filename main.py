@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 import joblib
 import pandas as pd
 import numpy as np    
@@ -7,6 +8,20 @@ import os
 
 # Initialize the FastAPI app
 app = FastAPI()
+
+# allow CORS
+origins = [
+    "http://localhost"
+]
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,  # Allows all or specific origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all HTTP methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allow all headers
+)
 
 class MushroomClassifierHandler:
 
