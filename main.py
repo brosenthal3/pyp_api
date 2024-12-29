@@ -11,7 +11,7 @@ app = FastAPI()
 
 # allow CORS
 origins = [
-    "http://localhost"
+    "http://localhost:8080" # flutter web app 
 ]
 
 # Add CORS middleware
