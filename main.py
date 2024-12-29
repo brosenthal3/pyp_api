@@ -131,11 +131,7 @@ def predict(input: dict):
         
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
-    
-if __name__ == "__main__":
-    # Get the PORT from the environment variable (default to 8000 if not set)
-    port = int(os.environ.get("PORT", 5000))
-    uvicorn.run(app, host="0.0.0.0", port=port)
+
 
 # running the app in CLI:
 # uvicorn app:app --reload --host 0.0.0.0 --port 8000
