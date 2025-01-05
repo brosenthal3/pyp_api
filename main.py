@@ -12,7 +12,13 @@ app = FastAPI()
 # allow CORS
 origins = [
     "http://localhost:8080", # development environment 
-    "https://brosenthal3.github.io/*" # github pages, where the web app is hosted
+    "https://brosenthal3.github.io", # github pages, where the web app is hosted
+    "https://brosenthal3.github.io/pick_your_poison/#/mushroom_designer/cap",
+    "https://brosenthal3.github.io/pick_your_poison/#/mushroom_designer/gills",
+    "https://brosenthal3.github.io/pick_your_poison/#/mushroom_designer/stem",
+    "https://brosenthal3.github.io/pick_your_poison/#/mushroom_designer/other",
+    "https://brosenthal3.github.io/pick_your_poison/#/prediction_page",
+    "https://brosenthal3.github.io/pick_your_poison/#/species_page"
 ]
 
 # Add CORS middleware
