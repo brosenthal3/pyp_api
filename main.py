@@ -12,7 +12,7 @@ app = FastAPI()
 # allow CORS
 origins = [
     "http://localhost:8080", # development environment 
-    "https://brosenthal3.github.io/pick_your_poison/" # github pages, where the web app is hosted
+    "https://brosenthal3.github.io/" # github pages, where the web app is hosted
 ]
 
 # Add CORS middleware
